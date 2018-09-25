@@ -52,7 +52,30 @@ print('The interest is {}'.format(interest))
 v0,v1,t=eval(input("Enter v0 v1 and t:>>"))
 a=(v1-v0)/t
 print('The average acceleration is {}'.format(a))
+
+#EP-7
+money=float(input("Enter the monthly saving amount>>"))
+t=((((((money*1.00417)+money)*1.00417+money)*1.00417+money)*1.00417+money)*1.00417+100)*1.00417
+print("After the sixth month, the account value is {}".format(t))
+
+#EP-7-2
+money=float(input("Enter the monthly saving amount>>"))
 '''
+
+'''
+#EP-8
+a=int(input("shu ru 0--999>>"))
+if(a>0 and a<999):
+    b=a//10
+    x=b%10
+    y=a//100
+    z=a%10
+    print("sum {}".format(x+y+z))
+else:
+    print("error")
+'''
+
+#EP-8-2
 
 
 
