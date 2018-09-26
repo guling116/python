@@ -57,10 +57,15 @@ print('The average acceleration is {}'.format(a))
 money=float(input("Enter the monthly saving amount>>"))
 t=((((((money*1.00417)+money)*1.00417+money)*1.00417+money)*1.00417+money)*1.00417+100)*1.00417
 print("After the sixth month, the account value is {}".format(t))
-
+'''
 #EP-7-2
 money=float(input("Enter the monthly saving amount>>"))
-'''
+a=1+0.00417
+s=0
+for i in range(6):
+    s=float((money+s)*a)
+print("money {}".format(s))
+
 
 '''
 #EP-8
