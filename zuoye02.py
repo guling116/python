@@ -72,7 +72,7 @@ chr(ord(a)+1)
 '''
 
 
-
+'''
 #EP-9
 import math
 a,b,c=eval(input("Enter a , b , c :"))
@@ -81,12 +81,21 @@ if(A>0):
     r1=(-b+math.sqrt(A))/2*a
     r2=(-b-math.sqrt(A))/2*a
     print("THe roots are ",r1,r2)
-a,b,c=eval(input("Enter a , b , c :"))
 elif(A==0):
     r1=(-b+math.sqrt(A))/2*a
     print("The roots are",r1)
-a,b,c=eval(input("Enter a , b , c :"))
 else:
     print("The equation has no real root")
+'''
 
+#EP-10
+#coding:utf-8
+import random
+a=random.randrange(0,100)
+b=random.randrange(0,100)
+n=eval(input("shu ru yi ge shu"))
+if(n==(a+b)):
+    print(true)
+else:
+    print(falsh)
 
