@@ -50,11 +50,20 @@ elif(b/a==b1/a1):
 else:
     print("package 1 has the batter pice")
 '''
-'''
 #EP-14
 a,b=eval(input("shu ru yuefen he nianfen :"))
-a=[1,2,3,4,5,6,7,8,9,10,11,12]
-'''
+s=[1,2,3,4,5,6,7,8,9,10,11,12]
+if a not in s[1,3,5,7,8,10,12]:
+   if a not in s[4,6,9,11]:
+       if ((b%4==0&b%100!=0)|b%400==0) :
+           print("29")
+       else:
+           print("28")
+   else:
+       print("30")
+else:
+    print("31")
+
 
 
 

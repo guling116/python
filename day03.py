@@ -87,10 +87,40 @@ for i in range(142):
     print(sum_=sum_+i)
 print(i,sum_)
 '''
-
+'''
 #from __future__ import print_function
 for i in range(1,10):
     for j in range(1,i+1):
         print('{}x{}={}'.format(j,i,i*j),end=' ')
     print()
+'''
+
+#函数调用：
+def abc(nu1,nu2,nu3):                   #输入函数的三个值
+    return nu1,nu2,nu3                  #原本返回三个值
+def acb(nu1,nu2,nu3):                   #括号里的可以写任意之值，                                                                       # 只做接受上个函数的三个值
+    nu4=nu1**2
+    nu5=nu2**2
+    nu6=nu3**2
+    return nu4,nu5,nu6                  #返回相乘之后的三个值
+def cba(nu1,nu2,nu3,nu4,nu5,nu6):       #括号的值可以是任意，接受上面的六个值
+    res1=nu4-nu1
+    res2=nu5-nu2
+    res3=nu6-nu3
+    print(res1,res2,res3)
+a,b,c=abc(3,6,9)                        #用a,b,c三个容器接受用户输入的三个数
+q,w,e=acb(a,b,c)                        #用q,w,e三个容器接受相乘之后的三个数    
+cba(a,b,c,q,w,e)                        #记住传参的函数！！！
+                                        #记住传参的函数！！！
+                                        #记住传参的函数！！！
+
+
+
+
+
+
+
+
+
+
 
