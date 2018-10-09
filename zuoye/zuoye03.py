@@ -85,7 +85,7 @@ while(s<12000):
 '''
 
 
-
+'''
 #3-6
 p = eval(raw_input(">>"))
 y = eval(raw_input(">>"))
@@ -96,7 +96,7 @@ while n<8.125:
     print(s)
     m = s/12
     print(m)
-
+'''
 
 
 '''
@@ -112,3 +112,82 @@ while(s>0):
     s=s-1
 print(m)
 '''
+'''
+#3-8
+a=1.0
+b=3.0
+sum1=0
+while (a<=97):
+    sum1=sum1+a/b
+    a=a+2
+    b=b+2
+print(sum1)
+'''
+'''
+#3-9
+#_*_coding:utf8-
+a=input(">>")
+b=0
+sum=0
+for i in range(1,a+1):
+    sum+=pow((-1),(a+1))/2*a-1
+b=sum*4
+print(b)
+'''
+
+'''
+#3-9-2
+n=0
+for i in range(1,100000):
+    n=n+pow((-1),i+1)/(2*i-1)
+    if(i%10000==0):
+        print(4*n)
+'''
+
+#_*_coding:utf8-
+import platform
+import os
+import time
+import _thread
+
+def get_os():
+	os = platform.system()
+	if os == 'Windows':
+		return 'n'
+	else:
+		return 'c'
+		
+def ping_ip(ip_str):
+	cmd = ['ping','-{op}'.format(op=get_os()),'1',ip_str]
+	
+	output = os.popen(' '.join(cmd)).readlines()
+	
+	for line in list(output):
+		if not line:
+			continue
+		if str(line).upper().find('TTL') >= 0:
+			print('%s on' % ip_str)
+			break
+			
+			
+def find_ip(ip_prefix):
+	for i in range(1,256):
+		ip = '%s.%s' % (ip_prefix,i)
+		_thread.start_new_thread(ping_ip,(ip,))
+		time.sleep(0.3)
+
+
+if __name__ == '__main__':
+	start_time = time.clock()
+	ip_prefix = '192.168.3'
+	print('%sruning' % ip_prefix)
+	find_ip(ip_prefix)
+	print('over')
+	
+
+
+
+
+
+
+
