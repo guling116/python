@@ -23,7 +23,8 @@ if __name__ == '__main__':
     a.winthdraw(2500)
     a.deposit(3000)
     a.getMothlyInterestRate()
-
+'''
+'''
 #4-1-1
 class Account:
     def __init__(self,idname=0,balance=100,annua=0):
@@ -47,6 +48,8 @@ a.getMon()
 a.winthdraw(2500)
 a.deposit(3000)
 a.getMonre()
+'''
+'''
 #4-2
 import math
 class Regul:
@@ -69,7 +72,8 @@ Regul(x=6,y=4).getPerimeter()
 Regul(x=6,y=4).Area()
 Regul(10,4,5.6,7.8).getPerimeter()
 Regul(10,4,5.6,7.8).Area()
-
+'''
+'''
 #4-3.
 class fan:
     def __init__(self,speed=1,on=False,radius=5,color="blue"):
@@ -81,7 +85,7 @@ class fan:
         print("speed is {},on is {} ,radius is {},color is {}".format(self.speed,self.on,self.radius,self.color))
 fan(3,not False,10,'yellow').show()
 '''
-
+'''
 #4-4
 class Li:
     def __init__(self,a,b,c,d,e,f):
@@ -110,6 +114,7 @@ if(g.isSo()==True):
     g.getX()
     g.getY()
 
+'''
 '''
 #4-5
 import math
@@ -142,6 +147,26 @@ else:
     LE(a,b,c,d,e,f).gety()
 '''
 
+class Li:
+    def __init__(self,a,b,c,d,e,f):
+        self.a=a
+        self.b=b
+        self.c=c
+        self.d=d
+        self.e=e
+        self.f=f
+    def getX(self):
+        self.x=((self.e * self.d)-(self.b * self.f))/(self.a*self.d-self.b*self.c)
+        print(self.x)
+    def getY(self):
+        self.y=((self.a * self.f)-(self.e*self.c))/(self.a*self.d-self.b*self.c)
+        print(self.y)
+a,b,c,d,e,f=eval(raw_input(">>"))
+if a*d-b*c==0:
+    print("no")
+else:
+    Li(a,b,c,d,e,f).getX()
+    Li(a,b,c,d,e,f).getY()
 
 
 
