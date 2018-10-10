@@ -23,8 +23,7 @@ if __name__ == '__main__':
     a.winthdraw(2500)
     a.deposit(3000)
     a.getMothlyInterestRate()
-'''
-'''
+
 #4-1-1
 class Account:
     def __init__(self,idname=0,balance=100,annua=0):
@@ -48,8 +47,6 @@ a.getMon()
 a.winthdraw(2500)
 a.deposit(3000)
 a.getMonre()
-'''
-'''
 #4-2
 import math
 class Regul:
@@ -72,61 +69,63 @@ Regul(x=6,y=4).getPerimeter()
 Regul(x=6,y=4).Area()
 Regul(10,4,5.6,7.8).getPerimeter()
 Regul(10,4,5.6,7.8).Area()
-'''
+
 #4-3.
-class Fan:
-    def __init__(self,speed=1,on=False,radius=5,color='blue',):
-        self.SLOW=1
-        self.MEDIUM=2
-        self.FAST=3
-        self.__speed=int(speed)
-        self.__on=bool(on)
-        self.__radius=float(radius)
-        self.__color=str(color)
-        print("speed is {},on is {} ,radius is {},color is {}".format(self.__speed,self.__on,self.__radius,self.__color))
-Fan(3,not False,10,'yellow')
-Fan(2,False,5,'blue')
+class fan:
+    def __init__(self,speed=1,on=False,radius=5,color="blue"):
+        self.speed=speed
+        self.on=on
+        self.radius=radius
+        self.color=color
+    def show(self):
+        print("speed is {},on is {} ,radius is {},color is {}".format(self.speed,self.on,self.radius,self.color))
+fan(3,not False,10,'yellow').show()
 '''
 
 #4-4
-class LE:
+class Li:
     def __init__(self,a,b,c,d,e,f):
-        self.__a = a
-        self.__b = b
-        self.__c = c
-        self.__d = d
-        self.__e = e
-        self.__f = f
-    def getx(self):
-        x = ((self._LE__e*self._LE__d)-(self._LE__b*self._LE__f))/((self._LE__a*self._LE__d)-(self._LE__b*self._LE__c))
-        print(x)
-    def gety(self):
-        y = ((self._LE__a*self._LE__f)-(self._LE__e*self._LE__c))/((self._LE__a*self._LE__d)-(self._LE__b*self._LE__c))
-        print(y)
-a,b,c,d,e,f = eval(raw_input(">>"))
-if a*d-b*c==0:
-    print("no")
-else:
-    LE(a,b,c,d,e,f).getx()
-    LE(a,b,c,d,e,f).gety()
-'''
+        self.a=a
+        self.b=b
+        self.c=c
+        self.d=d
+        self.e=e
+        self.f=f
+    def isSo(self):
+        self.z=(self.a * self.d)-(self.b * self.c)
+        if (self.z!=0):
+            return True
+        else:
+            print("False")
+
+    def getX(self):
+        self.x=((self.e * self.d)-(self.b * self.f))/self.z
+        print(self.x)
+    def getY(self):
+        self.y=((self.a * self.f)-(self.e*self.c))/self.z
+        print(self.y)
+a,b,c,d,e,f=eval(raw_input(">>"))
+g=Li(a,b,c,d,e,f)
+if(g.isSo()==True):
+    g.getX()
+    g.getY()
 
 '''
 #4-5
 import math
 class LE:
     def __init__(self,a,b,c,d,e,f):
-        self.__a = a
-        self.__b = b
-        self.__c = c
-        self.__d = d
-        self.__e = e
-        self.__f = f
+        self.a = a
+        self.b = b
+        self.c = c
+        self.d = d
+        self.e = e
+        self.f = f
     def getx(self):
-        x = (self.__e*self.__d-self.__b*self.__f)/(self.__a*self.__d-self.__b*self.__c)
+        x = (self.e*self.d-self.b*self.f)/(self.a*self.d-self.b*self.c)
         print(x)
     def gety(self):
-        y = (self.__a*self.__f-self.__e*self.__c)/(self.__a*self.__d-self.__b*self.__c)
+        y = (self.a*self.f-self.e*self.c)/(self.a*self.d-self.b*self.c)
         print(y)
 x1,y1,x2,y2=eval(raw_input("Enter the endpoints of the first line segment:"))
 x3,y3,x4,y4=eval(raw_input("Enter the endpoints of the second line segment:"))
@@ -141,8 +140,8 @@ if a*d-b*c==0:
 else:
     LE(a,b,c,d,e,f).getx()
     LE(a,b,c,d,e,f).gety()
-
 '''
+
 
 
 
