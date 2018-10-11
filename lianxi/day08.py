@@ -93,10 +93,85 @@ print(sum,a)
 #for i in range(1,11):
 #    for j in range(1,j):
 #         print(i,j)
+#for i in range(1,11):
+#    for j in range(1,11):
+#        print("*")
+#    print()
+
+# shu chu 10 hang 10 lie de dong xi 
+#for i in range(1,11):
+#    for j in range(1,11):
+
+# shu chu shi hang nei rong mei hang xian shi *
+'''
 for i in range(1,11):
     for j in range(1,11):
         print("*")
-    print()
+        if i%10==0:
+            print("")
+'''
+
+'''
+# shu chu shi hang neirong  mei hang xian shi *
+for i in range(1,11):
+    print("*"*10)
+'''
+
+
+'''
+#输出十行内容，每行输入不同，第一行输入×，第二行输出××，以此类推
+for i in range(1,11):
+    print("a"*i)
+'''
+
+'''
+#输出九行，第1行输出1,第二行输出12,第九行输出12345789.
+for i in range(1,10):
+    for j in range(1,i+1):
+         print(j,end=" ")
+    print("")
+
+#print("")
+'''
+"""
+
+            ***
+for i in range(1,10):
+    for j in range(1,i+1):
+        for z in range(1,j+1):
+            print(z,end=" ")
+        print("")
+    print("")
+"""
+'''
+#输入九九乘法表
+for i in range (1,10):
+    for j in range(1,i+1):
+        s=i*j
+        print(j,"x",i,"=",s," ",end="")
+    print("")    
+'''
+
+'''
+#  计算10个99相加后的值并输出
+sum=0
+for i in range(10):
+    sum+=99*10
+    print(sum)
+'''
+
+'''
+#计算从1加到100的值并输出
+sum = 0
+for i in range(101):
+    sum+=i
+print(sum)
+'''
+
+
+#计算10的阶乘（1x2x3x4x5x6x7x8x9）
+    
+
 
 
 
