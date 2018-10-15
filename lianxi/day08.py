@@ -170,9 +170,54 @@ print(sum)
 
 
 #计算10的阶乘（1x2x3x4x5x6x7x8x9）
-    
 
 
+
+'''
+#python爆破密码
+import crypt
+def testPass(cryptPass):
+    salt = cryptPass[0:2]
+    dictFile = open("/root/Desktop/dictionary.txt","r")
+    for word in dictFile.readlines():
+        word = word.strip("\n")
+        cryptWord=crypt.crypt(word,salt)
+        if cryptWord == cryptPass:
+            print ("[+]Found Password: " +word)
+        else:
+            print("[-]Password {} Not found.".format(word))
+
+def main():
+    passFile = open('/root/Desktop/2.txt')
+    for line in passFile.readlines():
+        if ':' in line:
+            user = line.split(':')[0]
+            cryptPass = line.split(':')[1].strip(' ')
+            print ("[*] Cracking Password For:" + user)
+            testPass(cryptPass)
+
+
+if __name__ == "__main__":
+    main()
+'''
+
+import crypt
+import itertools
+
+def main():
+    flag=0
+    salt='AB'
+    cryptPass='5I64J9ZNvp2'
+    test=(''.join(x) for x in in itertools.productduct("qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM", repeat=7))
+    while flag==0:
+        word=next(test)
+        cryptWord =  = crypt.crypt(wor(word,salt)
+        if cryptWord == cryptPass:
+            print('[+] Found Password:'+word)
+            flag=1
+
+if __name__ == '__main__':
+    main()
 
 
 
