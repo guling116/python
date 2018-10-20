@@ -1,3 +1,4 @@
+'''
 #编写9×9乘法口诀
 for i in range(1,10):
     for j in range(1,i+1):
@@ -56,3 +57,22 @@ for i in range(1,6):
         sum=sum+j
     print("第",i,"同学的总成绩",sum)
 print()
+'''
+
+name_1="niu  "
+name_2="bai chao "
+name_3=name_1 +" "+ name_2
+print(name_3)
+print(name_3.title())
+print(name_3.lower())
+print("\nhello," + name_3.upper() + "\n!")
+messge= "hello, " + name_3.upper() + "!"
+print(messge)
+print("\npython\n")
+print("Languages:\n\tPython\n\tC\n\tJavaScript")
+print(name_3.rstrip())
+
+
+
+
+
